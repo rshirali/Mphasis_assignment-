@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="431635b2-bc00-436b-854d-afe1e5a28add" name="Changes" comment="" />
+    <list default="true" id="431635b2-bc00-436b-854d-afe1e5a28add" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/page-objects/filterDialogBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/page-objects/filterDialogBox.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/page-objects/login.page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/page-objects/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/page-objects/preRetirementCalculator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/specs/test.e2e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/specs/test.e2ePreRetCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/test.e2ePreRetCalculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +25,12 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -23,17 +42,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/rshirali/Documents/Mphasis-assignment&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/rshirali/Documents/Mphasis-assignment",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/specs" />
@@ -55,6 +76,7 @@
       <workItem from="1694157204966" duration="12000" />
       <workItem from="1694157219386" duration="36000" />
       <workItem from="1694157256187" duration="33000" />
+      <workItem from="1694157295772" duration="3272000" />
     </task>
     <servers />
   </component>

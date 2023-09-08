@@ -39,6 +39,7 @@ describe('001_Verify Pre-retirement calculator', () => {
     it('Verify saving amount calculated based on data entered ' +
         'in the Default calculator values dialog box. ' +
         'Include Social Security income in the calculation', async () => {
+        await browser.pause(2000) //Slight pause before the calculator is populated
         await preRetirementCalculator.doCalculate_001("39", "67",
             "70000", "40000",
             "200000", "15",

@@ -1,2 +1,4 @@
 Installation steps:
 Ensure Node and NPM versions are set correctly
+Run npm install in the project folder
+npm run wdio to excute the tests
