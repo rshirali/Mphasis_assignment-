@@ -1,4 +1,16 @@
 Installation steps:
-Ensure Node and NPM versions are set correctly
-Run npm install in the project folder
-npm run wdio to excute the tests
+Ensure Node (v18.16.1) and NPM (9.5.1) versions are set correctly
+Run 'npm install' in the project folder
+Run 'npm run wdio' to execute the tests
+
+Results:
+001_Verify Pre-retirement calculator
+[chrome 116.0.5845.179 mac os x #0-0]    ✓ Verify saving amount based on goals and plans for retirement years.WITHOUT including Social Security income
+[chrome 116.0.5845.179 mac os x #0-0]    ✓ Verify saving amount based on your goals and plans for retirement years. Include Social Security income in the calculation
+[chrome 116.0.5845.179 mac os x #0-0]    ✓ Verify data entry in the Default calculator values dialog box
+[chrome 116.0.5845.179 mac os x #0-0]    ✓ Verify saving amount calculated based on data entered in the Default calculator values dialog box. Include Social Security income in the calculation
+[chrome 116.0.5845.179 mac os x #0-0]    ✓ Verify error message is displayed for each missing required field
+
+To generate a Allure report
+npm run genReport
+

@@ -32,6 +32,13 @@ class PreRetirementCalculator extends Page {
         };
     }
 
+    //Page selectors for error messages and other banners
+    get pageSelectors() {
+        return {
+            requiredFieldsErrorMessage: () => validators.waitForElement("//p[@id='calculator-input-alert-desc']"),
+        };
+    }
+
     /**
      *  User should be able to submit form with all required fields filled in
      *
@@ -77,10 +84,121 @@ class PreRetirementCalculator extends Page {
                 await (await this.calculatorInputs.socialSecurityOverrideAmount()).setValue(socialSecurityOverrideAmount)
             }
         }
-       // await browser.pause(5000)
-        //await browser.pause(3000)
         await (await this.calculatorInputs.calculateButton()).click()
         await browser.pause(3000)
+    }
+
+    /**
+     *  Ensure an error is thrown/displayed when a required field is not populated
+     *
+     */
+    async requiredFields_001() {
+        //Key-value pair initialization of parameters and their initial values
+        const initialData = {
+            currentAge: "35",
+            retirementAge: "72",
+            currentAnnualIncome: "20555",
+            spouseAnnualIncome: "23000",
+            currentRetirementSavingsBalance: "200000",
+            currentlySavingEachYearForRetirementRate: '12',
+            rateOfIncreaseYourSavingsEachYear: '6',
+        };
+        const fieldValueToEmpty: string = ""
+
+        // Limiting the test case to four fields
+        const allowedKeys = [
+            "currentAge",
+            "retirementAge",
+            "currentAnnualIncome",
+            "currentRetirementSavingsBalance",
+        ];
+        //Set a required field to "" while all other required field are populated
+        //Verify error message
+        for (const key in initialData) {
+            if (initialData.hasOwnProperty(key) && allowedKeys.includes(key)) {
+                switch (key) {
+                    case "currentAge":
+                        //Setting field to empty
+                        await (await this.calculatorInputs.currentAge()).setValue(fieldValueToEmpty)
+                        await (await this.calculatorInputs.retirementAge()).setValue(initialData.retirementAge)
+                        await (await this.calculatorInputs.currentAnnualIncome()).click()
+                        await (await this.calculatorInputs.currentAnnualIncome()).setValue(initialData.currentRetirementSavingsBalance)
+                        await (await this.calculatorInputs.spouseAnnualIncome()).click()
+                        await (await this.calculatorInputs.spouseAnnualIncome()).setValue(initialData.spouseAnnualIncome)
+                        await (await this.calculatorInputs.currentRetirementSavingsBalance()).click()
+                        await (await this.calculatorInputs.currentRetirementSavingsBalance()).setValue(initialData.currentRetirementSavingsBalance)
+                        await (await this.calculatorInputs.currentlySavingEachYearForRetirement()).click()
+                        await (await this.calculatorInputs.currentlySavingEachYearForRetirement()).setValue(initialData.currentlySavingEachYearForRetirementRate)
+                        await (await this.calculatorInputs.rateOfIncreaseYourSavingsEachYear()).click()
+                        await (await this.calculatorInputs.rateOfIncreaseYourSavingsEachYear()).setValue(initialData.rateOfIncreaseYourSavingsEachYear)
+                        break
+                    case "retirementAge":
+                        await browser.refresh() //Before each case
+                        await (await this.calculatorInputs.currentAge()).setValue(initialData.currentAge)
+                        //Setting field to empty
+                        await (await this.calculatorInputs.retirementAge()).setValue(fieldValueToEmpty)
+                        await (await this.calculatorInputs.currentAnnualIncome()).click()
+                        await (await this.calculatorInputs.currentAnnualIncome()).setValue(initialData.currentAnnualIncome)
+                        await (await this.calculatorInputs.spouseAnnualIncome()).click()
+                        await (await this.calculatorInputs.spouseAnnualIncome()).setValue(initialData.spouseAnnualIncome)
+                        await (await this.calculatorInputs.currentRetirementSavingsBalance()).click()
+                        await (await this.calculatorInputs.currentRetirementSavingsBalance()).setValue(initialData.currentRetirementSavingsBalance)
+                        await (await this.calculatorInputs.currentlySavingEachYearForRetirement()).click()
+                        await (await this.calculatorInputs.currentlySavingEachYearForRetirement()).setValue(initialData.currentlySavingEachYearForRetirementRate)
+                        await (await this.calculatorInputs.rateOfIncreaseYourSavingsEachYear()).click()
+                        await (await this.calculatorInputs.rateOfIncreaseYourSavingsEachYear()).setValue(initialData.rateOfIncreaseYourSavingsEachYear)
+                        break
+                    case "currentAnnualIncome":
+                        await browser.refresh() //Before each case
+                        await (await this.calculatorInputs.currentAge()).setValue(initialData.currentAge)
+                        await (await this.calculatorInputs.retirementAge()).setValue(initialData.retirementAge)
+                        //Setting field to empty
+                        await (await this.calculatorInputs.currentAnnualIncome()).click()
+                        await (await this.calculatorInputs.currentAnnualIncome()).setValue(fieldValueToEmpty)
+                        await (await this.calculatorInputs.spouseAnnualIncome()).click()
+                        await (await this.calculatorInputs.spouseAnnualIncome()).setValue(initialData.spouseAnnualIncome)
+                        await (await this.calculatorInputs.currentRetirementSavingsBalance()).click()
+                        await (await this.calculatorInputs.currentRetirementSavingsBalance()).setValue(initialData.currentRetirementSavingsBalance)
+                        await (await this.calculatorInputs.currentlySavingEachYearForRetirement()).click()
+                        await (await this.calculatorInputs.currentlySavingEachYearForRetirement()).setValue(initialData.currentlySavingEachYearForRetirementRate)
+                        await (await this.calculatorInputs.rateOfIncreaseYourSavingsEachYear()).click()
+                        await (await this.calculatorInputs.rateOfIncreaseYourSavingsEachYear()).setValue(initialData.rateOfIncreaseYourSavingsEachYear)
+                        break
+                    case "currentRetirementSavingsBalance":
+                        await browser.refresh() //Before each case
+                        await (await this.calculatorInputs.currentAge()).setValue(initialData.currentAge)
+                        await (await this.calculatorInputs.retirementAge()).setValue(initialData.retirementAge)
+                        await (await this.calculatorInputs.currentAnnualIncome()).click()
+                        await (await this.calculatorInputs.currentAnnualIncome()).setValue(initialData.currentAnnualIncome)
+                        await (await this.calculatorInputs.spouseAnnualIncome()).click()
+                        await (await this.calculatorInputs.spouseAnnualIncome()).setValue(initialData.spouseAnnualIncome)
+                        //Setting field to empty
+                        await (await this.calculatorInputs.currentRetirementSavingsBalance()).click()
+                        await (await this.calculatorInputs.currentRetirementSavingsBalance()).setValue(fieldValueToEmpty)
+                        await (await this.calculatorInputs.currentlySavingEachYearForRetirement()).click()
+                        await (await this.calculatorInputs.currentlySavingEachYearForRetirement()).setValue(initialData.currentlySavingEachYearForRetirementRate)
+                        await (await this.calculatorInputs.rateOfIncreaseYourSavingsEachYear()).click()
+                        await (await this.calculatorInputs.rateOfIncreaseYourSavingsEachYear()).setValue(initialData.rateOfIncreaseYourSavingsEachYear)
+                        break
+                    // Add cases for other keys as needed
+                    default:
+                        // Handle the default case (if any)
+                        console.log(`Unknown Key: ${key}`);
+                }
+            }
+            //Common to all cases
+            await (await this.calculatorInputs.calculateButton()).click()
+            //Not required as such. Just that it is easier to view the interaction in UI
+            await (await this.pageSelectors.requiredFieldsErrorMessage()).scrollIntoView(
+                {
+                    behavior: 'smooth', // or 'smooth' for smooth scrolling
+                    block: 'center',  // Vertically align the element to the center
+                    //inline: 'center', // Horizontally align the element to the center
+                }
+            )
+            //Verify for error message
+            expect(await this.pageSelectors.requiredFieldsErrorMessage()).toBeDisplayed()
+        }
     }
 
     get defaultValuesDialogBox() {

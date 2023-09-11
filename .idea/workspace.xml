@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="431635b2-bc00-436b-854d-afe1e5a28add" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/page-objects/filterDialogBox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/page-objects/filterDialogBox.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/page-objects/login.page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/page-objects/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/page-objects/preRetirementCalculator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/specs/test.e2e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/page-objects/preRetirementCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/page-objects/preRetirementCalculator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/specs/test.e2ePreRetCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/test.e2ePreRetCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +44,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+    "ts.external.directory.path": "/Users/rshirali/Documents/Mphasis-assignment/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,7 +68,8 @@
       <workItem from="1694157204966" duration="12000" />
       <workItem from="1694157219386" duration="36000" />
       <workItem from="1694157256187" duration="33000" />
-      <workItem from="1694157295772" duration="3272000" />
+      <workItem from="1694157295772" duration="5117000" />
+      <workItem from="1694372056282" duration="22136000" />
     </task>
     <servers />
   </component>

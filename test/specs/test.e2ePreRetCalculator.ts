@@ -17,7 +17,7 @@ describe('001_Verify Pre-retirement calculator', () => {
 
     it('Verify saving amount based on your goals and plans for retirement years. ' +
         'Include Social Security income in the calculation', async () => {
-        await browser.refresh()
+        await browser.refresh() //Before the start of the test
         await preRetirementCalculator.doCalculate_001("35", "67",
             "50000", "20000",
             "200000", "15",
@@ -29,7 +29,7 @@ describe('001_Verify Pre-retirement calculator', () => {
     })
 
     it('Verify data entry in the Default calculator values dialog box ', async () => {
-        await browser.refresh()
+        await browser.refresh() //Before the start of the test
         await preRetirementCalculator.enterDefaultValues_001("3500", "25",
             "50", "10",
             "90", "Yes","6"
@@ -47,6 +47,13 @@ describe('001_Verify Pre-retirement calculator', () => {
             "Yes",
             "Married",
             "20000"
+        )
+    })
+
+    it('Verify error message is displayed for each missing required field', async () => {
+        await browser.pause(2000) //Slight pause before the calculator is populated
+        await browser.refresh() //Before the start of the test
+        await preRetirementCalculator.requiredFields_001(
         )
     })
 })
